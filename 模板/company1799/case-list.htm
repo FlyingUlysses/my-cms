@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+	{ms:include filename=headFile.htm/}
+	<body>
+		{ms:include filename=header.htm/}
+		<div id="bannerny" style="background:url({ms:globalskin.url/}images/banner_case.jpg) no-repeat center"></div>
+		<div id="box">
+			<div class="box">
+				<p class="box_top"></p>
+				<div class="box_left">
+					<p class="boxleft_title" style="background:url({ms:globalskin.url/}images/listico_case.png) no-repeat left;">工程案例<span>Cases</span></p>
+					<ul class="boxleft_content">
+						{ms:channel typeid=61 size=3}
+						<li>
+							<a href='[field.typelink/]'>[field.typetitle/]</a>
+						</li>
+						{/ms:channel}
+					</ul>
+				</div>
+				<div class="box_right">
+					<p class="boxright_title">
+						<span>当前位置：
+							<a href='{ms:global.host/}'>主页</a> >
+							<a href='{ms:global.url/}/61/index.html'>工程案例</a> >
+						</span>
+					</p>
+					<div class="boxright_content">
+						<ul class="newList">
+							{ms:arclist typeid=61 size=5 ispaging=true}
+							<li>
+								<a href="[field.link/]">
+									<p class="new_image">
+										<img src="[field.litpic/]" />
+									</p>
+									<div class="new_right">
+										<p class="new_title">
+											<span>[field.date fmt=yyyy-MM-dd/]</span> 
+											[field.title/]
+										</p>
+										<div class="new_content">
+											[field.descrip/]
+										</div>
+										<p class="new_more">
+											<a href="[field.link/]">READ MORE >></a>
+										</p>
+									</div>
+								</a>
+							</li>
+							{/ms:arclist}
+						</ul>
+						<div class="page">
+								<div class="pages">
+										<div style="display:inline-block" id="firstPage_div"><span><a href="{ms:page.index/}">首页</a></span></div>
+										<div style="display:inline-block" id="afterPage_div"><span><a href="{ms:page.pre/}">上一页</a></span></div>
+										<div style="display:inline-block" id="countPage_div" cur="{ms:page.cur/}" total="{ms:page.total/}"><span>{ms:page.cur/}/{ms:page.total/}</span></div>
+										<div style="display:inline-block" id="nextPage_div"><a href="{ms:page.next/}">下一页</a></div>
+										<div style="display:inline-block" id="lastPage_div"><a href='{ms:page.last/}'>末页</a></div>
+								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		{ms:include filename=footer.htm/}
+	</body>
+</html>
