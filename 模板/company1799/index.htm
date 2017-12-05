@@ -40,10 +40,13 @@
 				<p class="showCase_title">产品列表<span class="spanen">Product</span></p>
 				<div class="showCase_content  align:center">
 					<p class="scc_title" style="position: relative;left: 251px;">
-						<span id="span1" class="hover" onclick="changeTabs('1')">硬件产品</span>
-						<span id="span2" class="" onclick="changeTabs('2')">软件产品</span>
+						<span id="span1" class="hover" onclick="changeTabs('1')" style="margin-left: 80px;">硬件产品</span>
+						<span id="span2" class="" onclick="changeTabs('2')" style="margin-left:10px;" >软件产品</span>
 					</p>
-					<ul class="scc_content " id="scc_content1">
+					<ul class="scc_content " id="scc_content1" style="position:relative;">
+						<div style="position: absolute;right: 20px;top: -30px;">
+							<a href="{ms:global.url/}/106/108/index.html" ><strong>查看更多>></strong></a>
+						</div>
 						{ms:arclist typeid=108 size=4 order=desc}
 						<li>
 							<a href="[field.link/]" title="[field.title/]">
@@ -53,8 +56,11 @@
 						</li>
 						{/ms:arclist}
 					</ul>
-					<ul class="scc_content hide" id="scc_content2">
-						{ms:arclist typeid=107 size=1 order=desc}
+					<ul class="scc_content hide" id="scc_content2" style="position:relative;">
+						<div style="position: absolute;right: 20px;top: -30px;">
+							<a href="{ms:global.url/}/106/107/index.html" ><strong>查看更多>></strong></a>
+						</div>
+						{ms:arclist typeid=107 size=4 order=desc}
 						<li>
 							<a href="[field.link/]" title="[field.title/]">
 								<p class="case_image"><img src="[field.litpic/]" width="235" height="145" /></p>
@@ -66,135 +72,138 @@
 				</div>
 			</div>
 		</div>
-
+		
 		<div class="main bgf8">
-			<div class="news">
-				<p class="showCase_title" style="margin:10px 0 30px 0;">新闻中心<span class="spanen">NEWS</span></p>
-				<div class="news_content" id="news_left">
-					<div class="news_left_div" id="news_left_div">
-						<ul class="news_left">
-							{ms:arclist typeid=68 size=2 order=desc}
-							<li>
-								<p class="news_left_image">
-									<a href="[field.link/]"><img src="[field.litpic/]" /></a>
-								</p>
-								<div class="news_left_title">[field.title/]</div>
-							</li>
-							{/ms:arclist}
-						</ul>
-						<ul class="news_leftNav">
-							<li class="on"></li>
-							<li></li>
-						</ul>
-						<script type="text/javascript">
-							$(document).ready(function() {
-								$("#news_left_div").Slide({
-									effect: "fade",
-									speed: "normal",
-									timer: 2000,
-									autoPlay: true,
-									defIndex: 0,
-									claNav: "news_leftNav",
-									claCon: "news_left",
-									steps: 1
+				<div class="news">
+					<p class="showCase_title" style="margin:10px 0 30px 0;">新闻中心<span class="spanen">NEWS</span></p>
+					<div class="news_content" id="news_left">
+						<div class="news_left_div" id="news_left_div">
+							<ul class="news_left">
+								{ms:arclist typeid=68 size=3 order=desc}
+								<li>
+									<p class="news_left_image">
+										<a href="[field.link/]"><img src="[field.litpic/]" /></a>
+									</p>
+									<div class="news_left_title">[field.title/]</div>
+								</li>
+								{/ms:arclist}
+							</ul>
+							<ul class="news_leftNav">
+								<li class="on"></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<script type="text/javascript">
+								$(document).ready(function() {
+									$("#news_left_div").Slide({
+										effect: "fade",
+										speed: "normal",
+										timer: 2000,
+										autoPlay: true,
+										defIndex: 0,
+										claNav: "news_leftNav",
+										claCon: "news_left",
+										steps: 1
+									});
 								});
-							});
-						</script>
-					</div>
-					<ul class="news_center">
-						{ms:arclist typeid=69 size=2 order=desc}
-						<li>
-							<p class="news_center_title">
-								<a href="[field.link/]" title="[field.title/]">[field.title/]</a>
-							</p>
-							<div class="news_center_content">
-								[field.descrip/]
-							</div>
-						</li>
-						{/ms:arclist}
-					</ul>
-					<div class="news_right">
-						<ul class="news_right_content">
-							{ms:arclist typeid=70 size=7 order=desc}
-							<li><span>[field.date fmt=yyyy-MM-dd/]</span>
-								<a href="[field.link/]" title="[field.title/]">[field.title/]</a>
+							</script>
+						</div>
+						<ul class="news_center">
+							{ms:arclist typeid=69 size=2 order=desc}
+							<li>
+								<p class="news_center_title">
+									<a href="[field.link/]" title="[field.title/]">[field.title/]</a>
+								</p>
+								<div class="news_center_content">
+									[field.descrip/]
+								</div>
 							</li>
 							{/ms:arclist}
 						</ul>
+						<div class="news_right">
+							<ul class="news_right_content">
+								{ms:arclist typeid=70 size=7 order=desc}
+								<li><span>[field.date fmt=yyyy-MM-dd/]</span>
+									<a href="[field.link/]" title="[field.title/]">[field.title/]</a>
+								</li>
+								{/ms:arclist}
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-
+		
 		<div class="main bgfff">
 			<div class="ourTeam">
 				<p class="showCase_title" style="margin:10px 0 30px 0;">工程案例<span class="spanen">Case Presentation</span></p>
-				<ul class="teamList" style="width:1220px;">
-					{ms:arclist typeid=61 size=5 o}
+				<ul class="scc_content " id="scc_content1" style="position:relative;">
+					<div style="position: absolute;right: 20px;top: -30px;">
+						<a href="{ms:global.url/}/61/index.html" ><strong>查看更多>></strong></a>
+					</div>
+					{ms:arclist typeid=61 size=4 order=desc}
 					<li>
-						<a href="[field.link/]"><img src="[field.litpic/]" width="195" height="250" />
-							<div class="teamHover">
-								[field.title/]<br />
+						<a href="[field.link/]" title="[field.title/]">
+							<p class="case_image"><img src="[field.litpic/]" width="235" height="145" /></p>
+							<p class="case_title">[field.title/]</p>
 						</a>
 					</li>
 					{/ms:arclist}
-					<li style="margin-right:0; ">
-						<a href="{ms:global.url/}/61/index.html"><img src="{ms:globalskin.url/}images/image8.jpg" width="195" height="250" /></a>
-					</li>
 				</ul>
 				</div>
 			</div>
 			
-			<div class="main bgf6">
-				<div class="aboutUs">
-					<div class="aboutUs_left">
-						{ms:arclist typeid=93 size=1}
-							<img src="[field.litpic/]" height="262px"width="410px"/> 
-						{/ms:arclist}
-					</div>
-					<div class="aboutUs_right">
-						<p class="aboutUs_right_title">关于我们<span class="spanen">ABOUT YaWa</span></p>
-						<div class="aboutUs_right_content"> {ms:global.descrip/} </div>
-					</div>
-					<div style="clear:both"></div>
+			
+		<div class="main bgf6" >
+			<div class="aboutUs">
+				<div class="aboutUs_left">
+					{ms:arclist typeid=93 size=1}
+						<img src="[field.litpic/]" height="262px"width="410px"/> 
+					{/ms:arclist}
 				</div>
+				<div class="aboutUs_right">
+					<p class="aboutUs_right_title">关于我们<span class="spanen">ABOUT YAWA</span></p>
+					<div class="aboutUs_right_content"> {ms:global.descrip/} </div>
+				</div>
+				<div style="clear:both"></div>
 			</div>
-			<div class="main bgfff" style="margin-bottom: 30px;">
+		</div>
+			
+			<div class="main bgfff" style="margin-bottom: 25px;">
 				<div class="customer">
 					<p class="showCase_title" style="margin:0 0 20px 0;">合作伙伴<span class="spanen">CUSTOMER</span></p>
 					<div class="leftIco"></div>
 					<div class="customer_content">
 						<ul>
 							<li>
-								<a title="北京燃气"><img src="/upload/1/editor/1511928394581.jpg" /></a>
+								<a title="北京燃气"><img style="width: 100%;" src="/upload/1/editor/1511928394581.jpg" /></a>
 							</li>
 							<li>
-								<a title="中国燃气"><img src="/upload/1/editor/1511928394618.jpg" /></a>
+								<a title="中国燃气"><img style="width: 100%;" src="/upload/1/editor/1511928394618.jpg" /></a>
 							</li>
 							<li>
-								<a title="华润燃气"><img src="/upload/1/editor/1511928394514.jpg" /></a>
+								<a title="华润燃气"><img style="width: 100%;" src="/upload/1/editor/1511928394514.jpg" /></a>
 							</li>
 							<li>
-								<a title="北控集团"><img src="/upload/1/editor/1511928394488.jpg" /></a>
+								<a title="北控集团"><img style="width: 100%;" src="/upload/1/editor/1511928394488.jpg" /></a>
 							</li>
 							<li>
-								<a title="今日阳光"><img src="/upload/1/editor/1511928394657.jpg" /></a>
+								<a title="今日阳光"><img style="width: 100%;" src="/upload/1/editor/1511928394657.jpg" /></a>
 							</li>
 							<li>
-								<a title="华港创新"><img src="/upload/1/editor/1511928394443.jpg" /></a>
+								<a title="华港创新"><img style="width: 100%;" src="/upload/1/editor/1511928394443.jpg" /></a>
 							</li>
 							<li>
-								<a title="杜尔气化"><img src="/upload/1/editor/1511928394553.jpg" /></a>
+								<a title="杜尔气化"><img style="width: 100%;" src="/upload/1/editor/1511928394553.jpg" /></a>
 							</li>
 							<li>
-								<a title="昆仑华港"><img src="/upload/1/editor/1511928394449.jpg" /></a>
+								<a title="昆仑华港"><img style="width: 100%;" src="/upload/1/editor/1511928394449.jpg" /></a>
 							</li>
 							<li>
-								<a title="长乐安然"><img src="/upload/1/editor/1511928394668.jpg" /></a>
+								<a title="长乐安然"><img style="width: 100%;" src="/upload/1/editor/1511928394668.jpg" /></a>
 							</li>
 						</ul>
 					</div>
-					<div class="rightIco"></div>
+					<div class="rightIco" style=" margin-right: 10px;"></div>
 					<script type="text/javascript">
 						$(document).ready(function() {
 							$(".customer_content").jCarouselLite({
@@ -209,6 +218,7 @@
 					</script>
 				</div>
 			</div>
-				{ms:include filename=footer.htm/}
+			<div style="height:20px;"><div>
+			{ms:include filename=footer.htm/}
 	</body>
 </html>

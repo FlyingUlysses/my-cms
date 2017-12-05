@@ -60,6 +60,7 @@ a:hover {
 }
 
 img {
+	max-width:100%;
 	border: 0;
 	vertical-align: middle;
 }
@@ -315,7 +316,7 @@ body {
 
 .foot {
 	background: url(../images/f_bj.jpg) no-repeat center top;
-	height: 380px;
+	height: 330px;
 	overflow: hidden;
 	width: 100%;
 	color: #909090;
@@ -351,7 +352,7 @@ body {
 
 .contact {
 	width: 602px;
-	margin: 82px 0 0 59px;
+	margin: 80px 0 0 45px;
 	float: left;
 	background: url(../images/f_line.gif) no-repeat left 5px;
 	padding-left: 14px;
@@ -398,7 +399,7 @@ body {
 
 .foot .links {
 	width: 240px;
-	margin: 80px 0 0 0;
+	margin: 68px 0 0 0;
 	overflow: hidden;
 	float: right;
 }
@@ -574,7 +575,6 @@ body {
 
 .case_image img {
 	width: 100%!important;
-	height: auto!important;
 	min-height: 195px;
 }
 
@@ -599,10 +599,10 @@ body {
 
 .aboutUs_left {
 	width: 480px;
-	height: 310px;
+	height: 280px;
 	float: left;
-	padding: 50px 0;
-	margin-right: 45px;
+	padding-top: 50px;
+	margin-right: 35px;
 }
 
 .aboutUs_right {
@@ -870,7 +870,7 @@ body {
 }
 
 .customer_content ul li {
-	width: 340px;
+	width: 350px;
 	height: 80px;
 	float: left;
 	margin: 0 15px;
